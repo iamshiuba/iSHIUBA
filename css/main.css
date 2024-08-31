@@ -70,15 +70,32 @@ p {
   color: #ff6f69;
 }
 
-#root {
+#content {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  background-color: #1a202c;
+  justify-content: center;
   padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  background-color: #1a202c;
+  border-radius: 10px;
+  border: 5px solid #ff6f69;
+  box-shadow: 0 0 10px #1a202c;
+}
+
+#footer {
+  background-color: #1a202c;
+  color: #ff6f69;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .videos {
@@ -112,3 +129,4 @@ p {
 
 .navbar-toggler {
   background-color: #ff3e37;
+}
