@@ -1,7 +1,7 @@
 body {
   background-color: #1a202c;
   color: #ff6f69;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
@@ -87,7 +87,7 @@ p {
 #footer {
   background-color: #1a202c;
   color: #ff6f69;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -114,11 +114,12 @@ p {
 .btn {
   background-color: #ff9900;
   color: #2f2f2f;
-  border-radius: 10px;
+  border-radius: 40px;
   border: 5px solid #ff9900;
   box-shadow: 0 0 10px #2f2f2f;
   margin-bottom: 1rem;
   margin-top: 1rem;
+
 }
 
 .navbar-brand {

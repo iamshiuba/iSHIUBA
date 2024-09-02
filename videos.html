@@ -13,38 +13,48 @@
     <link rel="stylesheet" href="CSS/main.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a href="index.html" class="navbar-brand">iSHIUBA</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menu"
-          aria-controls="menu"
-          aria-expanded="false"
-          aria-label="Show menu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav">
-            <li>
-              <a href="videos.html" class="nav-link">Videos</a>
-            </li>
-            <li>
-              <a href="about.html" class="nav-link">About Me</a>
-            </li>
-            <li>
-              <a href="https://github.com/iamshiuba" class="nav-link" target="_blank">GitHub</a>            </li>
-          </ul>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a href="index.html" class="navbar-brand">iSHIUBA</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Show menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav">
+              <li>
+                <a href="videos.html" class="nav-link">Videos</a>
+              </li>
+              <li>
+                <a href="about.html" class="nav-link">About Me</a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/iamshiuba"
+                  class="nav-link"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <div class="container-fluid"id="root">
+      </nav>
+    </header>
+    <main>
       <h1>Videos</h1>
-      <p>This is the videos page <br>
-        Here is some videos</p>
+      <p>
+        This is the videos page <br />
+        Here is some videos
+      </p>
       <div class="videos">
         <div class="over_thinking">
           <iframe
@@ -60,16 +70,15 @@
           <a
             class="btn btn-secondary"
             href="https://www.youtube.com/watch?v=Ct5kE8KGnQM"
-            role="button"
+            target="_blank"
+            >OVER-THINKING</a
           >
-            Available here
-          </a>
         </div>
         <div class="child_nost">
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/2jfeauEQx7w?si=39mBSlkj8xZ4KkFx"
+            src="https://www.youtube.com/embed/2jfeauEQx7w?si=TN1Mgz_QZqZ2zqUL"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -79,18 +88,20 @@
           <a
             class="btn btn-secondary"
             href="https://www.youtube.com/watch?v=2jfeauEQx7w"
-            role="button"
+            target="_blank"
+            >Childhood Nostalgia</a
           >
-            Available here
-          </a>
         </div>
       </div>
-    </div>
-    <script src="JS/script.js"></script>
+    </main>
+    <footer>
+      <p>Copyright © 2024 iSHIUBA</p>
+      <p>Powered by NEXTせだい Musical Project</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
 </html>
