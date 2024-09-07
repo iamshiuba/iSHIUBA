@@ -106,16 +106,26 @@ main p {
   margin-top: 1rem;
 }
 
-.videos {
-  display: inline-block;
-  vertical-align: auto;
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
-.videos .links {
-  display: flex;
-  justify-content: space-between;
+.video-links {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  padding : 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #ff6f69;
+}
+
+.link:hover {
+  color: #ff08007a;
 }
 
 
@@ -135,7 +145,7 @@ footer ul {
 
 footer li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 1rem;
 }
 
 footer p {
