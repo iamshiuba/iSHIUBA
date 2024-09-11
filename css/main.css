@@ -7,7 +7,7 @@ body {
 
 .bg-body-tertiary {
   --bs-bg-opacity: 0;
-  background-color: #111111 !important;
+  background-color: #270000 !important;
 }
 
 /* header */
@@ -24,6 +24,20 @@ nav {
   line-height: 1.5;
   margin: 0 auto;
   max-width: 100%;
+}
+
+nav .container-fluid {
+  background-color: black;
+}
+
+nav a.nav-link {
+  background-color: #ffffff09;
+  text-align: center;
+}
+
+.navbar {
+  --bs-bg-opacity: 0;
+  background-color: #000000 ;
 }
 
 .navbar-brand {
@@ -68,13 +82,22 @@ nav {
 main {
   padding: 1rem;
   text-align: center;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5;
   margin: 0 auto;
-  max-width: 100%;
+}
+
+main div.index {
+  margin:8rem auto;
+}
+
+main div#root {
+  margin:8rem auto;
+}
+
+main div#videos p {
+  margin:5rem auto;
 }
 
 main a {
@@ -88,25 +111,21 @@ main a:hover {
 }
 
 main h1 {
-  margin-bottom: 1rem;
-  margin-top: 3.5rem;
-  color: #ff6f69;
+  margin-bottom: 3rem;
+  color: #ff080060;
+}
+
+main h1:hover {
+  color: #ff0800;
 }
 
 main p {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
   color: #ff6f69;
 }
 
 #content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .video-container {
@@ -134,7 +153,6 @@ main p {
 
 /* footer */
 footer {
-  background-color: rgb(0, 0, 0);
   padding: 1em;
   padding-top: 1rem;
   text-align: center;
