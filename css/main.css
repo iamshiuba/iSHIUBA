@@ -111,6 +111,7 @@ main a:hover {
 }
 
 main h1 {
+  font-size: 5rem;
   margin-bottom: 3rem;
   color: #ff080060;
 }
@@ -123,12 +124,16 @@ main p {
   color: #ff6f69;
 }
 
+main p.lead {
+  font-size: 2rem;
+}
+
 #content {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
 
-.video-container {
+.col {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,14 +141,12 @@ main p {
 }
 
 .video-links {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  padding : 1rem;
+  margin: 1rem;
 }
 
 .link {
   text-decoration: none;
-  color: #ff6f69;
+  color: #ff000028;
 }
 
 .link:hover {
