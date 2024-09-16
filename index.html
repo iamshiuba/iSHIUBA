@@ -15,29 +15,33 @@
   <body class="bg-body-tertiary">
     <header id="nav">
       <nav class="navbar navbar-expand-lg bg-body-tertiary"></nav>
+      <script src="javascript/translations.js"></script>
       <script src="javascript/nav.js"></script>
     </header>
     <main id="content">
-      <div class="index">
-        <div class="greetings">
-          <h1>
-            Hello, world!</h1>
+      <section>
+        <div class="index">
+          <div class="greetings">
+            <h1 data-translate="greeting">Hello, world!</h1>
+          </div>
+          <div class="greetings">
+            <p class="lead" data-translate="mainMessage">
+              This is the main page of iSHIUBA. <br />
+              The website is still under construction, but you can check out
+              <br />
+              some of my
+              <a href="videos.html" data-translate="videos">videos</a>, my
+              <a href="about.html" data-translate="about">about page</a> or my
+              <a
+                rel="noopener"
+                href="https://github.com/iamshiuba"
+                target="_blank"
+                >GitHub</a
+              >.
+            </p>
+          </div>
         </div>
-        <div class="greetings">
-          <p class="lead">This is the main page of iSHIUBA. <br>
-            The website is still under construction, but you can check out <br> some
-            of my
-            <a href="videos.html">videos</a>, my
-            <a href="about.html">about page</a> or my
-            <a
-              rel="noopener"
-              href="https://github.com/iamshiuba"
-              target="_blank"
-              >GitHub</a
-            >.
-          </p>
-        </div>
-      </div>
+      </section>
     </main>
     <footer id="footer"></footer>
     <script src="javascript/footer.js"></script>
