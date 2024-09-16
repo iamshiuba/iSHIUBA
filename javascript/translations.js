@@ -1,5 +1,6 @@
 const translations = {
-  en: {
+    en: {
+    ishiuba: "iSHIUBA",
     videos: "Videos",
     about: "About",
     greeting: "Hello, world!",
@@ -13,7 +14,8 @@ const translations = {
     aboutMessage:
       "I made this website for fun.<br /> Hope you enjoy coz I'm about to make it better and better! <br />Thank you for visiting!",
   },
-  br: {
+    br: {
+    ishiuba: "iSHIUBA",
     videos: "Vídeos",
     about: "Sobre",
     greeting: "Olá, mundo!",
