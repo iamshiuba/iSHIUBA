@@ -1,12 +1,12 @@
-const footer = document.querySelector('footer');
+const footer = document.querySelector("footer");
 
 // Função para importar o footer
 function importFooter() {
-    const footerHtml = fetch('footer.html')
-        .then(response => response.text())
-        .then(html => {
-            footer.innerHTML = html;
-        });
+  const footerHtml = fetch("footer.html")
+    .then((response) => response.text())
+    .then((html) => {
+      footer.innerHTML = html;
+    });
 }
 
 // Chamar a função para importar o footer

@@ -1,6 +1,36 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a href="index.html" class="navbar-brand" data-translate="ishiuba">ISHIUBA</a>
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="languageDropdown"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        🌐
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('en')"
+            >English</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('br')"
+            >Português</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('jp')"
+            >日本語</a
+          >
+        </li>
+      </ul>
+    </div>
+    <a href="index.html" class="navbar-brand" data-translate="ishiuba"
+      >iSHIUBA</a
+    >
     <button
       class="navbar-toggler"
       type="button"
@@ -32,34 +62,6 @@
           >
         </li>
       </ul>
-      <div class="dropdown">
-        <button
-          class="btn btn-secondary dropdown-toggle"
-          type="button"
-          id="languageDropdown"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          🌐
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-          <li>
-            <a class="dropdown-item" href="#" onclick="setLanguage('en')"
-              >English</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item" href="#" onclick="setLanguage('br')"
-              >Português</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item" href="#" onclick="setLanguage('jp')"
-              >日本語</a
-            >
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
 </nav>
