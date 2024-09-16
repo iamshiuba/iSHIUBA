@@ -12,6 +12,21 @@ body {
 
 /* header */
 
+.btn-secondary {
+  --bs-btn-bg: #000000;
+  --bs-btn-hover-bg: #ff00003d;
+  --bs-btn-active-bg: #4e0000;
+  --bs-btn-border-color: #000000;
+  --bs-btn-active-border-color: #4e0000;
+  --bs-btn-hover-border-color: #000000;
+}
+.dropdown-menu {
+  --bs-dropdown-bg: #000;
+  --bs-dropdown-link-color: #ff6f69;
+  --bs-dropdown-link-hover-color: #ff6f69;
+  --bs-dropdown-link-hover-bg:#4e0000;
+}
+
 nav {
   display: flex;
   flex-direction: row;

@@ -1,22 +1,65 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a href="index.html" class="navbar-brand">iSHIUBA</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-        aria-controls="menu" aria-expanded="false" aria-label="Show menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav me-auto">
+  <div class="container-fluid">
+    <a href="index.html" class="navbar-brand" data-translate="ishiuba">iSHIUBA</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#menu"
+      aria-controls="menu"
+      aria-expanded="false"
+      aria-label="Show menu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav me-auto">
+        <li>
+          <a href="videos.html" class="nav-link" data-translate="videos"
+            >Videos</a
+          >
+        </li>
+        <li>
+          <a href="about.html" class="nav-link" data-translate="about">About</a>
+        </li>
+        <li>
+          <a
+            rel="noopener"
+            href="https://github.com/iamshiuba"
+            class="nav-link"
+            target="_blank"
+            >GitHub</a
+          >
+        </li>
+      </ul>
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="languageDropdown"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          🌐
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
           <li>
-            <a href="videos.html" class="nav-link">Videos</a>
+            <a class="dropdown-item" href="#" onclick="setLanguage('en')"
+              >English</a
+            >
           </li>
           <li>
-            <a href="about.html" class="nav-link">About</a>
+            <a class="dropdown-item" href="#" onclick="setLanguage('br')"
+              >Português</a
+            >
           </li>
           <li>
-            <a rel="noopener" href="https://github.com/iamshiuba" class="nav-link" target="_blank">GitHub</a>
+            <a class="dropdown-item" href="#" onclick="setLanguage('jp')"
+              >日本語</a
+            >
           </li>
         </ul>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
