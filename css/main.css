@@ -143,11 +143,6 @@ main p.lead {
   font-size: 2rem;
 }
 
-#content {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
 .col {
   display: flex;
   flex-direction: column;
@@ -168,8 +163,13 @@ main p.lead {
   color: #ff08007a;
 }
 
+section div#youtube {
+  background-color: #420808;
+  background-size:contain;
+}
 
 /* footer */
+
 footer {
   padding: 1em;
   padding-top: 1rem;
