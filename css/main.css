@@ -29,7 +29,7 @@ body {
 
 nav {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 1rem;
@@ -95,25 +95,13 @@ nav a.nav-link {
 
 /* main */
 main {
-  padding: 1rem;
+
   text-align: center;
-  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5;
-  margin: 0 auto;
+  margin: 1 auto;
 }
 
-main div.index {
-  margin:8rem auto;
-}
-
-main div#root {
-  margin:8rem auto;
-}
-
-main div#videos p {
-  margin:5rem auto;
-}
 
 main a {
   color: #ff6f69;
@@ -170,36 +158,13 @@ section div#youtube {
 
 /* footer */
 
-footer {
-  padding: 1em;
-  padding-top: 1rem;
-  text-align: center;
-  clear: both;
-}
-
-footer ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer li {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-footer p {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+footer#footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
   color: #ff6f69;
+  background-color: #000000;
 }
 
-.footer-links a {
-  color: #ff6f69;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #ff08007a;
-}
