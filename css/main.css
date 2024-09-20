@@ -37,6 +37,7 @@ body {
   max-width: 60%;
   /* Garante que a coluna central não ocupe mais do que o necessário */
   padding: 20px;
+  align-content: center;
 }
 
 /* Left & Right Columns */
@@ -45,6 +46,7 @@ body {
   /* Define o tamanho das colunas laterais como 20% */
   max-width: 20%;
   /* Garante que as colunas laterais não ultrapassem o tamanho */
+  align-content: center;
 }
 
 .col-2 ul {
