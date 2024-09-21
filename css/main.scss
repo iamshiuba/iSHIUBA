@@ -4,7 +4,7 @@ $secondary-color: #420808;
 $light-bg: #dddddd;
 $dark-bg: #000000;
 $highlight-color: #ff0800;
-$font-family: 'Arial', sans-serif;
+$font-family: 'Arial ', monospace;
 
 /* Body */
 body {
@@ -51,10 +51,11 @@ body {
     /* Define o tamanho das colunas laterais como 20% */
     max-width: 20%;
     /* Garante que as colunas laterais não ultrapassem o tamanho */
+    align-content: center;
 }
 
 .col-2 ul {
-    text-align:center;
+    text-align: center;
 }
 
 /* Footer */
@@ -97,12 +98,46 @@ footer#footer {
         border: 2px solid lighten($primary-color, 20%);
         border-radius: 5px;
     }
+    .video-links {
+            margin-bottom: 25px;
+            a {
+                text-decoration:none;
+            }
+        }
 
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         filter: invert(100%);
         height: 30px;
         width: 30px;
+    }
+
+    .pagination {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        .page-item {
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .page-link {
+            background-color: $dark-bg;
+            color: $primary-color;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            border: $dark-bg;
+            margin-top: 40px;
+            &:hover {
+                color: $highlight-color;
+            }
+        }
     }
 }
 

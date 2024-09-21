@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col-2 bg-black">
           <!-- Left Column -->
-          <ul class="navbar-nav me-auto" style="margin-top: 40px; ">
+          <ul class="navbar-nav me-auto" style="margin-top: 40px">
             <li class="nav-item">
               <a
                 rel="noopener"
@@ -73,7 +73,7 @@
 
         <div class="col-8 bg-black">
           <!-- Main Central Column with Carousel -->
-          <div id="carouselExample" class="carousel slide">
+          <div id="carouselExample" class="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" id="index">
                 <h1 data-translate="greeting"></h1>
@@ -168,39 +168,48 @@
                 <p class="lead" data-translate="aboutMessage"></p>
               </div>
             </div>
-
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <ul class="pagination">
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  href="#index"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide-to="0"
+                  >1</a
+                >
+              </li>
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  href="#youtube"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide-to="1"
+                  >2</a
+                >
+              </li>
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  href="#about"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide-to="2"
+                  >3</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
+
         <div class="col-2 bg-black">
           <div id="indeximg">
-            <img src="img/shiuba2.png" style="width: 100%; margin-top: 40px;"  alt="shiuba" />
+            <img
+              src="img/shiuba2.png"
+              style="width: 100%; margin-top: 40px"
+              alt="shiuba"
+            />
           </div>
-          <div style="text-align: center;">
-            <p style="margin: 20px; margin-top: 40px;">Powered by NEXTせだい</p>
+          <div style="text-align: center">
+            <p style="margin: 20px; margin-top: 40px">Powered by NEXTせだい</p>
           </div>
         </div>
       </div>
