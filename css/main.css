@@ -225,7 +225,7 @@ button {
   transition: background-color 0.3s ease;
 }
 button:hover {
-  background-color: #ffa09c;
+  background-color: #ff3e36;
 }
 button .carousel-control-prev-icon,
 button .carousel-control-next-icon {
@@ -268,4 +268,14 @@ button .carousel-control-next-icon {
     max-width: 100%;
     padding: 10px;
   }
+}
+button {
+  background-color: #ff6f69;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #ff3e36;
 }/*# sourceMappingURL=main.css.map */

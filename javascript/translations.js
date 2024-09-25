@@ -13,7 +13,8 @@ const translations = {
     aboutTitle: "About",
     aboutMessage:
       "I made this website for fun. Hope you enjoy coz I'm about to make it better and better!<br/> Thank you for visiting!",
-    footer: "All rights reserved.",
+    musicTitle: "Music",
+
   },
   br: {
     ishiuba: "iSHIUBA",
@@ -29,12 +30,12 @@ const translations = {
     aboutTitle: "Sobre",
     aboutMessage:
       "Eu fiz este site por diversão. Espero que você goste, pois estou prestes a melhorá-lo cada vez mais!<br/> Obrigado pela visita!",
-    footer: "Todos os direitos reservados.",
+    musicTitle: "Músicas"
   },
   jp: {
     ishiuba: "アイシウバ",
     videos: "ビデオ",
-    about: "約",
+    about: "私について",
     greeting: "ハロー、ワールド！",
     mainMessage:
       "ウェブサイトはまだ建設中ですが、 ビデオ、自己紹介 セクション、またはGitHubをご覧いただけます。",
@@ -45,6 +46,6 @@ const translations = {
     aboutTitle: "約",
     aboutMessage:
       "私はこのウェブサイトを楽しむために作りました。 あなたが楽しんでくれることを願っています！ これからますます良くしていきます！<br/> 訪問していただきありがとうございます！",
-    footer: "全著作権所有。",
+    musicTitle: "音楽"
   },
 };
