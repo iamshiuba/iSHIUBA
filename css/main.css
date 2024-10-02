@@ -8,7 +8,7 @@
 
 body {
     background-color: #000000;
-    color: #c3c3c3;
+    color: #cacaca;
     font-family: "Cabin", sans-serif;
     font-weight: 400;
 }
@@ -22,7 +22,7 @@ header {
 
 header a {
     text-decoration: none;
-    color: #c3c3c3;
+    color: #cecece;
 }
 
 header a:hover {
@@ -33,13 +33,13 @@ main {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    text-align: center;
     gap: 1.5rem;
 }
 
-section {
+div.container-fluid {
     display: flex;
     flex-direction: column;
+    text-align: center;
     gap: 1rem;
 }
 
@@ -79,4 +79,17 @@ footer {
 footer a {
     text-decoration: none;
     color: #d59595;
+}
+
+@media (max-width: 768px) {
+    div {
+        display:flex;
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+iframe {
+    max-width: 768px;
 }
