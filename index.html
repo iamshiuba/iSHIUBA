@@ -30,42 +30,45 @@
     <div class="container">
       <div class="row">
         <div class="col-2 bg-black">
-          <!-- Left Column -->
-          <ul class="navbar-nav me-auto" style="margin-top: 40px">
-            <li class="nav-item">
+          <ul class="pagination">
+            <li id="Homepage" class="page-item active">
               <a
-                rel="noopener"
-                href="https://github.com/iamshiuba"
-                class="nav-link"
-                target="_blank"
-                >GitHub</a
+                class="page-link"
+                href="#index"
+                data-bs-target="#carouselExample"
+                data-bs-slide-to="0"
+                data-translate="Homepage"
+                >Homepage</a
               >
             </li>
-            <li class="nav-item">
+            <li id="Videos" class="page-item">
               <a
-                rel="noopener"
-                href="https://x.com/iamshiuba"
-                class="nav-link"
-                target="_blank"
-                >X/Twitter</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                rel="noopener"
-                href="https://www.youtube.com/@iamshiuba"
-                class="nav-link"
-                target="_blank"
+                class="page-link"
+                href="#youtube"
+                data-bs-target="#carouselExample"
+                data-bs-slide-to="1"
+                data-translate="Videos"
                 >YouTube</a
               >
             </li>
-            <li class="nav-item">
+            <li id="Music" class="page-item">
               <a
-                rel="noopener"
-                href="https://soundcloud.com/iamshiuba"
-                class="nav-link"
-                target="_blank"
-                >SoundCloud</a
+                class="page-link"
+                href="#music"
+                data-bs-target="#carouselExample"
+                data-bs-slide-to="2"
+                data-translate="Music"
+                >Music</a
+              >
+            </li>
+            <li id="About" class="page-item">
+              <a
+                class="page-link"
+                href="#about"
+                data-bs-target="#carouselExample"
+                data-bs-slide-to="3"
+                data-translate="About"
+                >About</a
               >
             </li>
           </ul>
@@ -84,7 +87,17 @@
               <div class="carousel-item active" id="index">
                 <h1 data-translate="greeting"></h1>
                 <p class="lead" data-translate="mainMessage"></p>
-                <iframe src="videos/endless-thoughts.mp4" frameborder="1" style="width: 100%; block-size: 440px;"></iframe>
+                <h1 data-translate="highlight">Destaques</h1>
+                <div class="video-links">
+                  <iframe
+                    src="https://www.youtube.com/embed/w-uEqgwQaX0?si=dv-jyVMuK_aGbCKc"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
 
               <div class="carousel-item" id="youtube">
@@ -194,44 +207,6 @@
                 <p class="lead" data-translate="aboutMessage"></p>
               </div>
             </div>
-            <ul class="pagination">
-              <li class="page-item">
-                <a
-                  class="page-link"
-                  href="#index"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide-to="0"
-                  >1</a
-                >
-              </li>
-              <li class="page-item">
-                <a
-                  class="page-link"
-                  href="#youtube"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide-to="1"
-                  >2</a
-                >
-              </li>
-              <li class="page-item">
-                <a
-                  class="page-link"
-                  href="#music"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide-to="2"
-                  >3</a
-                >
-              </li>
-              <li class="page-item">
-                <a
-                  class="page-link"
-                  href="#about"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide-to="3"
-                  >4</a
-                >
-              </li>
-            </ul>
           </div>
         </div>
 

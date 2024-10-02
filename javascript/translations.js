@@ -6,6 +6,7 @@ const translations = {
     greeting: "Hello, world!",
     mainMessage:
       "The website is still under construction, but you can check out some of my videos, my about page or my GitHub.",
+    highlight: "Highlights",
     footer: "All rights reserved.",
     videosTitle: "Videos",
     videosDescription:
@@ -14,7 +15,10 @@ const translations = {
     aboutMessage:
       "I made this website for fun. Hope you enjoy coz I'm about to make it better and better!<br/> Thank you for visiting!",
     musicTitle: "Music",
-
+    Homepage: "Homepage",
+    Videos: "Videos",
+    Music: "Music",
+    About: "About",
   },
   br: {
     ishiuba: "iSHIUBA",
@@ -23,6 +27,7 @@ const translations = {
     greeting: "Olá, mundo!",
     mainMessage:
       "O site ainda está em construção, mas você pode conferir alguns dos meus vídeos, a minha página sobre ou meu GitHub.",
+    highlight: "Destaque",
     footer: "Todos os direitos reservados.",
     videosTitle: "Vídeos",
     videosDescription:
@@ -30,7 +35,11 @@ const translations = {
     aboutTitle: "Sobre",
     aboutMessage:
       "Eu fiz este site por diversão. Espero que você goste, pois estou prestes a melhorá-lo cada vez mais!<br/> Obrigado pela visita!",
-    musicTitle: "Músicas"
+    musicTitle: "Músicas",
+    Homepage:  "Página Inicial",
+    Videos: "Vídeos",
+    Music: "Músicas",
+    About: "Sobre",
   },
   jp: {
     ishiuba: "アイシウバ",
@@ -39,6 +48,7 @@ const translations = {
     greeting: "こんにちは、世界！",
     mainMessage:
       "ウェブサイトはまだ建設中ですが、 ビデオ、自己紹介 セクション、またはGitHubをご覧いただけます。",
+    highlight: "見どころ",
     footer: "全著作権所有。",
     videosTitle: "ビデオ",
     videosDescription:
@@ -46,6 +56,10 @@ const translations = {
     aboutTitle: "私について",
     aboutMessage:
       "私はこのウェブサイトを楽しむために作りました。 あなたが楽しんでくれることを願っています！ これからますます良くしていきます！<br/> 訪問していただきありがとうございます！",
-    musicTitle: "音楽"
+    musicTitle: "音楽",
+    Homepage: "ホームページ",
+    Videos: "ビデオ",
+    Music: "音楽",
+    About: "私について",
   },
 };
