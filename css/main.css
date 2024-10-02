@@ -15,7 +15,8 @@ body {
 
 header {
     padding: 2rem;
-    background-color: #331f19;
+    background-color: #580202;
+    color: #ff000091;
     text-align: center;
 }
 
@@ -32,6 +33,7 @@ main {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    text-align: center;
     gap: 1.5rem;
 }
 
