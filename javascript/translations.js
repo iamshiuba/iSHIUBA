@@ -36,14 +36,14 @@ const translations = {
     ishiuba: "アイシウバ",
     videos: "ビデオ",
     about: "私について",
-    greeting: "ハロー、ワールド！",
+    greeting: "こんにちは、世界！",
     mainMessage:
       "ウェブサイトはまだ建設中ですが、 ビデオ、自己紹介 セクション、またはGitHubをご覧いただけます。",
     footer: "全著作権所有。",
     videosTitle: "ビデオ",
     videosDescription:
       "これはビデオセクションです。 視聴すべきビデオをいくつか紹介します:",
-    aboutTitle: "約",
+    aboutTitle: "私について",
     aboutMessage:
       "私はこのウェブサイトを楽しむために作りました。 あなたが楽しんでくれることを願っています！ これからますます良くしていきます！<br/> 訪問していただきありがとうございます！",
     musicTitle: "音楽"
