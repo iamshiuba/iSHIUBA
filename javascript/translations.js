@@ -14,10 +14,8 @@ const translations = {
     aboutTitle: "About",
     aboutMessage:
       "I made this website for fun. Hope you enjoy coz I'm about to make it better and better!<br/> Thank you for visiting!",
-    musicTitle: "Music",
     Homepage: "Homepage",
     Videos: "Videos",
-    Music: "Music",
     About: "About",
   },
   br: {
@@ -35,10 +33,8 @@ const translations = {
     aboutTitle: "Sobre",
     aboutMessage:
       "Eu fiz este site por diversão. Espero que você goste, pois estou prestes a melhorá-lo cada vez mais!<br/> Obrigado pela visita!",
-    musicTitle: "Músicas",
     Homepage:  "Página Inicial",
     Videos: "Vídeos",
-    Music: "Músicas",
     About: "Sobre",
   },
   jp: {
@@ -56,10 +52,8 @@ const translations = {
     aboutTitle: "私について",
     aboutMessage:
       "私はこのウェブサイトを楽しむために作りました。 あなたが楽しんでくれることを願っています！ これからますます良くしていきます！<br/> 訪問していただきありがとうございます！",
-    musicTitle: "音楽",
     Homepage: "ホームページ",
     Videos: "ビデオ",
-    Music: "音楽",
     About: "私について",
   },
 };
