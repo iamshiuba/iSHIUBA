@@ -18,70 +18,107 @@
     />
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body class="bg-body-tertiary">
-    <header id="nav">
-      <div class="container">
-        <nav></nav>
-      </div>
-      <script src="javascript/translations.js"></script>
-      <script src="javascript/nav.js"></script>
-    </header>
-
+  <body>
     <div class="container">
-      <div class="row">
-        <div class="col-2 bg-black">
-          <ul class="pagination">
-            <li id="Homepage" class="page-item active">
+      <div style="text-align: center">
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle"
+            type="button"
+            id="languageDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            🌐
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li>
               <a
-                class="page-link"
-                href="#index"
-                data-bs-target="#carouselExample"
-                data-bs-slide-to="0"
-                data-translate="Homepage"
-                >Homepage</a
+                class="dropdown-item"
+                href="#"
+                onclick="setLanguage('en')"
+                >🇺🇸 en-US</a
               >
             </li>
-            <li id="Videos" class="page-item">
+            <li>
               <a
-                class="page-link"
-                href="#youtube"
-                data-bs-target="#carouselExample"
-                data-bs-slide-to="1"
-                data-translate="Videos"
-                >YouTube</a
+                class="dropdown-item"
+                href="#"
+                onclick="setLanguage('br')"
+                >🇧🇷 pt-BR</a
               >
             </li>
-            <li id="Music" class="page-item">
+            <li>
               <a
-                class="page-link"
-                href="#music"
-                data-bs-target="#carouselExample"
-                data-bs-slide-to="2"
-                data-translate="Music"
-                >Music</a
-              >
-            </li>
-            <li id="About" class="page-item">
-              <a
-                class="page-link"
-                href="#about"
-                data-bs-target="#carouselExample"
-                data-bs-slide-to="3"
-                data-translate="About"
-                >About</a
+                class="dropdown-item"
+                href="#"
+                onclick="setLanguage('jp')"
+                >🇯🇵 日本語</a
               >
             </li>
           </ul>
-          <footer id="footer">
-            <p>
-              &copy; 2023 - 2024 IamSHIUBA.
-              <span data-translate="footer"></span>
-            </p>
-          </footer>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Left Sidebar Collapse -->
+        <div class="col-auto bg-black">
+
+          <div class="collapse collapse-horizontal show" id="leftCollapse">
+            <header id="nav">
+              <div class="container">
+                <nav></nav>
+              </div>
+              <script src="javascript/translations.js"></script>
+              <script src="javascript/nav.js"></script>
+            </header>
+
+            <ul class="pagination">
+              <li id="Homepage" class="page-item active">
+                <a
+                  class="page-link"
+                  href="#index"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide-to="0"
+                  data-translate="Homepage"
+                  >Homepage</a
+                >
+              </li>
+              <li id="Videos" class="page-item">
+                <a
+                  class="page-link"
+                  href="#youtube"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide-to="1"
+                  data-translate="Videos"
+                  >YouTube</a
+                >
+              </li>
+              <li id="About" class="page-item">
+                <a
+                  class="page-link"
+                  href="#about"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide-to="2"
+                  data-translate="About"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button
+            class="btn btn-black w-100"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#leftCollapse"
+            aria-expanded="false"
+            aria-controls="leftCollapse"
+          >
+            <
+          </button>
         </div>
 
-        <div class="col-8 bg-black">
-          <!-- Main Central Column with Carousel -->
+        <!-- Main Central Column with Carousel -->
+        <div class="col bg-black">
           <div id="carouselExample" class="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" id="index">
@@ -187,21 +224,6 @@
                   </div>
                 </div>
               </div>
-              <div class="carousel-item" id="music">
-                <h1 data-translate="musicTitle"></h1>
-                <div class="audio-player">
-                  <div class="text-lg-center">
-                    <h4>IamSHIUBA - mind_coding</h4>
-                  </div>
-                  <div>
-                    <audio
-                      src="audio/mind_coding.wav"
-                      id="music"
-                      controls
-                    ></audio>
-                  </div>
-                </div>
-              </div>
               <div class="carousel-item" id="about">
                 <h1 data-translate="aboutTitle"></h1>
                 <p class="lead" data-translate="aboutMessage"></p>
@@ -210,17 +232,31 @@
           </div>
         </div>
 
-        <div class="col-2 bg-black">
-          <div id="indeximg">
-            <img
-              src="img/shiuba2.png"
-              style="width: 100%; margin-top: 40px"
-              alt="shiuba"
-            />
+        <!-- Right Sidebar Collapse -->
+        <div class="col-auto bg-black">
+
+          <div class="collapse collapse-horizontal show" id="rightCollapse">
+
+            <footer id="footer">
+              <p style="padding: 20px; padding-top: 40px">
+                Powered by NEXTせだい
+              </p>
+              <p>
+                &copy; 2023 - 2024 IamSHIUBA. <br>
+                <span data-translate="footer"></span>
+              </p>
+            </footer>
           </div>
-          <div style="text-align: center">
-            <p style="margin: 20px; margin-top: 40px">Powered by NEXTせだい</p>
-          </div>
+          <button
+          class="btn btn-black w-100"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#rightCollapse"
+          aria-expanded="false"
+          aria-controls="rightCollapse"
+        >
+          >
+        </button>
         </div>
       </div>
     </div>
