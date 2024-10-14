@@ -5,7 +5,5 @@
     "editor.linkedEditing": true,
     "cSpell.words": [
         "SHIUBA"
-    ],
-    "codeium.searchMaxWorkspaceFileCount": 0,
-    "codeium.indexingRetentionPeriod": 7
+    ]
 }
