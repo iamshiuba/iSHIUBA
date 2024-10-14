@@ -10,7 +10,11 @@ html, body {
     font-family: "Arial", sans-serif;
     background-color: #000000;
     color: #e8e8e8;
-    min-height: 100vh;
+}
+
+#lang {
+    display: flex;
+    justify-content: center;
 }
 
 img {
@@ -30,64 +34,39 @@ a {
 .container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 1.5rem;
     margin: 0 1;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Main Central Column (Carousel) */
-.col-8 {
-    flex: 0 1 auto;  /* Aumenta a largura da coluna central */
-    padding: 1.5rem;
-}
-
-/* Left & Right Columns */
-.col-2 {
-    flex: 0 1 auto;  /* Diminui a largura das colunas laterais */
-    align-content: center;
-    padding: 0 10px; /* Espaçamento interno mínimo */
-}
-
-.col-2 ul {
-    text-align: center;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 1rem;
+    margin-top: 1.5rem;
     background-color: #000000;
     color: #c4c4c4;
 }
 
 /* Carousel */
 .carousel {
-    margin-top: 20px;
+    margin-top: 1rem;
 }
 
 .carousel .carousel-inner {
-    border-radius: 10px;
     background-color: black;
     text-align: center;
 }
 
 .carousel h1 {
     color: #ff0800;
-    text-transform: uppercase;
     font-size: 3rem;
     animation: fadeIn 2s ease-in-out;
 }
 
 .carousel p.lead {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .carousel iframe {
@@ -96,13 +75,11 @@ footer {
 }
 
 .carousel .video-links {
-    margin-bottom: 40px;
-    /* Adiciona mais espaçamento entre vídeos */
+    margin-bottom: 2rem;
 }
 
 .carousel .video-links a {
     color: #ff261d;
-    /* Garante contraste melhor para links */
     transition: color 0.3s ease;
 }
 
@@ -112,15 +89,9 @@ footer {
 
 .pagination {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.pagination .page-item:last-child {
-    margin-right: 0;
 }
 
 .pagination .page-link {
@@ -148,12 +119,8 @@ footer {
 
 /* Navbar */
 .navbar {
-    background-color: #c4c4c4;
-    padding: 15px 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -161,18 +128,14 @@ footer {
     color: #ff6f69;
     font-size: 1.8rem;
     font-weight: bold;
-    text-transform: uppercase;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .navbar .navbar-brand:hover {
-    color: #ff0800;
     transform: scale(1.1);
 }
 
 .navbar .nav-link {
-    color: #ffd1cf;
-    margin-left: 10px;
     transition: color 0.3s ease;
 }
 
@@ -182,11 +145,6 @@ footer {
     transform: scale(1.05);
 }
 
-.navbar .dropdown-menu {
-    background-color: #000000;
-    border-radius: 5px;
-    padding: 10px;
-}
 
 .navbar .dropdown-menu .dropdown-item {
     color: #ff6f69;
@@ -194,47 +152,25 @@ footer {
 }
 
 .navbar-toggler {
-    color: #bbbbbb;
     margin-top: 1rem;
-}
-
-.navbar .navbar-toggler-icon {
-    filter: invert(80%);
 }
 
 /* Responsividade para o Navbar */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 10px;
-    }
-
     .navbar-collapse {
         background-color: #000000;
-        padding: 15px;
     }
 
     .nav-link {
-        margin-left: 0;
-        margin-bottom: 10px;
         font-size: 1.1rem;
     }
-
-    .dropdown-menu {
-        position: relative;
-    }
 }
 
-.dropdown-menu {
-    background-color: #000000;
-}
 
-.dropdown-item {
-    color: #cccccc;
-}
 
 /* Nav Links */
 .nav-link {
-    color: #ffd1cf;
+    color: #cacaca;
     text-decoration: none;
     text-align: center;
     transition: color 0.3s ease;
@@ -251,8 +187,6 @@ button {
     background-color: #ff6f69;
     color: #ff0800 !important;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
@@ -281,25 +215,5 @@ button:hover {
     .container {
         flex-direction: column;
         align-items: center;
-    }
-
-    .col-2, .col-8 {
-        flex-basis: 100%;
-        max-width: 100%;
-        padding: 20px;
-    }
-
-    .col-2 {
-        order: 1;
-        text-align: center;
-    }
-
-    .col-8 {
-        order: 2;
-        padding-bottom: 20px;
-    }
-
-    .col-2:nth-child(3) {
-        order: 3;
     }
 }
