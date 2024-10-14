@@ -1,6 +1,36 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a href="index.html" class="navbar-brand" data-translate="ishiuba">iSHIUBA</a>
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="languageDropdown"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        🌐
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('en')"
+            >English</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('br')"
+            >Português</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="#" onclick="setLanguage('jp')"
+            >日本語</a
+          >
+        </li>
+      </ul>
+    </div>
+    <a href="index.html" class="navbar-brand" data-translate="ishiuba"
+      >iSHIUBA</a
+    >
     <button
       class="navbar-toggler"
       type="button"
@@ -15,51 +45,19 @@
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav me-auto">
         <li>
-          <a href="videos.html" class="nav-link" data-translate="videos"
-            >Videos</a
+          <a rel="noopener" href="https://github.com/iamshiuba" icon="" class="nav-link" target="_blank">GitHub</a
           >
         </li>
         <li>
-          <a href="about.html" class="nav-link" data-translate="about">About</a>
+          <a rel="noopener" href="https://x.com/iamshiuba" class="nav-link" target="_blank">X/Twitter</a></a>
         </li>
         <li>
-          <a
-            rel="noopener"
-            href="https://github.com/iamshiuba"
-            class="nav-link"
-            target="_blank"
-            >GitHub</a
-          >
+          <a rel="noopener" href="https://www.youtube.com/@iamshiuba" class="nav-link" target="_blank">YouTube</a>
+        </li>
+        <li>
+          <a rel="noopener" href="https://soundcloud.com/iamshiuba" class="nav-link" target="_blank">SoundCloud</a>
         </li>
       </ul>
-      <div class="dropdown">
-        <button
-          class="btn btn-secondary dropdown-toggle"
-          type="button"
-          id="languageDropdown"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          🌐
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-          <li>
-            <a class="dropdown-item" href="#" onclick="setLanguage('en')"
-              >English</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item" href="#" onclick="setLanguage('br')"
-              >Português</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item" href="#" onclick="setLanguage('jp')"
-              >日本語</a
-            >
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
 </nav>
