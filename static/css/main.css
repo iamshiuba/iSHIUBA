@@ -5,21 +5,15 @@
     box-sizing: border-box;
 }
 
-html, body {
+body {
     line-height: 1.6;
-    font-family: "Arial", sans-serif;
     background-color: #000000;
-    color: #e8e8e8;
-}
-
-#lang {
-    display: flex;
-    justify-content: center;
+    color: #ffffff;
 }
 
 img {
     max-width: 100%;
-    height: auto;
+    width: 250px;
 }
 
 ul, ol {
@@ -30,91 +24,34 @@ a {
     text-decoration: none;
 }
 
+/* General Styling */
+#lang {
+    display: flex;
+    justify-content: center;
+}
+
+#bwd, #fwd {
+    margin: 0;
+    color: #ff0800;
+    padding: 2rem;
+
+}
+
+#bwd:hover, #fwd:hover {
+    color: #ffffff;
+}
+
 /* Container */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
-    margin: 0 1;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    margin-top: 1.5rem;
-    background-color: #000000;
-    color: #c4c4c4;
-}
-
-/* Carousel */
-.carousel {
-    margin-top: 1rem;
-}
-
-.carousel .carousel-inner {
-    background-color: black;
     text-align: center;
 }
 
-.carousel h1 {
-    color: #ff0800;
-    font-size: 3rem;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.carousel p.lead {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.carousel iframe {
-    border: 2px solid #ffd1cf;
-    border-radius: 5px;
-}
-
-.carousel .video-links {
-    margin-bottom: 2rem;
-}
-
-.carousel .video-links a {
-    color: #ff261d;
-    transition: color 0.3s ease;
-}
-
-.carousel .video-links a:hover {
-    color: #cecece;
-}
-
-.pagination {
-    list-style: none;
+.link-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.pagination .page-link {
-    background-color: #000000;
-    color: #ff6f69;
-    border: none;
-    margin-top: 1rem;
-    transition: color 0.2s ease;
-}
-
-.pagination .page-link:hover {
-    color: #ff0800;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }
 
 /* Navbar */
@@ -145,17 +82,7 @@ footer {
     transform: scale(1.05);
 }
 
-
-.navbar .dropdown-menu .dropdown-item {
-    color: #ff6f69;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-toggler {
-    margin-top: 1rem;
-}
-
-/* Responsividade para o Navbar */
+/* Navbar Responsiveness */
 @media (max-width: 768px) {
     .navbar-collapse {
         background-color: #000000;
@@ -164,13 +91,16 @@ footer {
     .nav-link {
         font-size: 1.1rem;
     }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
-
-
 
 /* Nav Links */
 .nav-link {
-    color: #cacaca;
+    color: #ffffff;
     text-decoration: none;
     text-align: center;
     transition: color 0.3s ease;
@@ -182,21 +112,35 @@ footer {
     transform: scale(1.1);
 }
 
-/* Button Styling */
-button {
-    background-color: #ff6f69;
-    color: #ff0800 !important;
-    border: none;
-    transition: background-color 0.3s ease;
+/* Carousel */
+.carousel {
+    display: flex;
 }
 
-button:hover {
-    background-color: #ffffff;
+.carousel .carousel-inner {
+    background-color: black;
+    text-align: center;
+}
+
+.carousel h1 {
+    color: #ff0800;
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.carousel p.lead {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.carousel iframe {
+    border: 2px solid #ffd1cf;
+    border-radius: 5px;
 }
 
 /* Video Section */
 .video-links {
-    margin-top: 1rem;
+    margin: 1rem;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -207,13 +151,48 @@ button:hover {
 }
 
 .video-links a:hover {
-    color: #cccccc;
+    color: #ffffff;
 }
 
-/* Responsividade para col-2 e col-8 */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
+/* Pagination */
+.pagination {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pagination .page-link {
+    background-color: #000000;
+    color: #ff6f69;
+    border: none;
+    margin-top: 1rem;
+    transition: color 0.2s ease;
+}
+
+.pagination .page-link:hover {
+    color: #ff0800;
+}
+
+/* Buttons */
+button {
+    margin: 1rem;
+    background-color: #ff6f69;
+    transition: background-color 0.3s ease;
+}
+
+button:active {
+    background-color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
+
+/* Footer */

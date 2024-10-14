@@ -20,7 +20,7 @@ fetch('../templates/partials/nav.html')
   .catch(error => console.error('Erro ao carregar o nav:', error));
 
 // MAIN
-fetch('../templates/partials/main.html')
+fetch('../templates/content/main.html')
   .then(response => response.text())
   .then(data => {
     console.log('Main loaded');
