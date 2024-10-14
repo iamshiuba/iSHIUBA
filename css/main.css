@@ -1,31 +1,58 @@
 /* Body */
 body {
-  background-color: #2b0b0b;
+  font-family: 'Ubuntu', sans-serif;
 }
 
+/* Background */
+
 .bg-body-tertiary {
-  --bs-bg-opacity: 1;
-  background-color: #2b0b0b !important;
+  --bs-bg-opacity: 0;
+  background-color: #270000 !important;
 }
 
 /* header */
+
+.btn-secondary {
+  --bs-btn-bg: #000000;
+  --bs-btn-hover-bg: #ff00003d;
+  --bs-btn-active-bg: #4e0000;
+  --bs-btn-border-color: #000000;
+  --bs-btn-active-border-color: #4e0000;
+  --bs-btn-hover-border-color: #000000;
+}
+.dropdown-menu {
+  --bs-dropdown-bg: #000;
+  --bs-dropdown-link-color: #ff6f69;
+  --bs-dropdown-link-hover-color: #ff6f69;
+  --bs-dropdown-link-hover-bg:#4e0000;
+}
 
 nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 1rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
-  padding: 0;
   margin: 0 auto;
-  /* adiciona a propriedade 'auto' ao 'margin' para centralizar */
   max-width: 100%;
-  /* garante que o nav não ultrapasse a largura da tela */
+}
+
+nav .container-fluid {
+  background-color: black;
+}
+
+nav a.nav-link {
+  background-color: #ffffff09;
+  text-align: center;
+}
+
+.navbar {
+  --bs-bg-opacity: 0;
+  background-color: #000000 ;
 }
 
 .navbar-brand {
@@ -70,8 +97,22 @@ nav {
 main {
   padding: 1rem;
   text-align: center;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+main div.index {
+  margin:8rem auto;
+}
+
+main div#root {
+  margin:8rem auto;
+}
+
+main div#videos p {
+  margin:5rem auto;
 }
 
 main a {
@@ -85,44 +126,53 @@ main a:hover {
 }
 
 main h1 {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  color: #ff6f69;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  color: #ff080060;
+}
+
+main h1:hover {
+  color: #ff0800;
 }
 
 main p {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
   color: #ff6f69;
 }
 
+main p.lead {
+  font-size: 2rem;
+}
+
 #content {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.col {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 1rem;
+  align-items: center;
   margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
-.videos {
-  display: inline-block;
-  vertical-align: auto;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+.video-links {
+  margin: 1rem;
 }
 
-.videos .links {
-  display: flex;
-  justify-content: space-between;
+.link {
+  text-decoration: none;
+  color: #ff000028;
+}
+
+.link:hover {
+  color: #ff08007a;
 }
 
 
 /* footer */
 footer {
-  color: #fff;
   padding: 1em;
+  padding-top: 1rem;
   text-align: center;
   clear: both;
 }
@@ -135,7 +185,7 @@ footer ul {
 
 footer li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 1rem;
 }
 
 footer p {
