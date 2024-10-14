@@ -1,11 +1,3 @@
 {
-    "cSpell.enableFiletypes": [
-        "!html"
-    ],
-    "editor.linkedEditing": true,
-    "cSpell.words": [
-        "SHIUBA"
-    ],
-    "codeium.searchMaxWorkspaceFileCount": 0,
-    "codeium.indexingRetentionPeriod": 7
+    "cSpell.language": "en,en-US,lorem,en-GB"
 }
