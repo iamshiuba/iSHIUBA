@@ -11,6 +11,11 @@ body {
     color: #ffffff;
 }
 
+#bwd, #fwd, .page-link, button {
+    transition: all 0.3s ease;
+}
+
+
 img {
     max-width: 100%;
     width: 250px;
@@ -34,7 +39,7 @@ a {
     margin: 0;
     color: #ff0800;
     padding: 2rem;
-
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 #bwd:hover, #fwd:hover {
@@ -106,6 +111,12 @@ a {
     transition: color 0.3s ease;
 }
 
+.nav-link:focus {
+    outline: 2px solid #ff0800;
+    outline-offset: 4px;
+}
+
+
 .nav-link:hover {
     color: #ff0800;
     font-weight: bold;
@@ -137,6 +148,19 @@ a {
     border: 2px solid #ffd1cf;
     border-radius: 5px;
 }
+
+.carousel-item {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item:not(.active) {
+    opacity: 0;
+}
+
 
 /* Video Section */
 .video-links {
@@ -172,6 +196,8 @@ a {
 
 .pagination .page-link:hover {
     color: #ff0800;
+    text-shadow: 0 0 5px #ff0800;
+
 }
 
 /* Buttons */
@@ -179,6 +205,11 @@ button {
     margin: 1rem;
     background-color: #ff6f69;
     transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff261d;
+    transform: translateY(-2px);
 }
 
 button:active {
@@ -190,9 +221,29 @@ button:active {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
 /* Footer */
+.footer-container {
+    padding: 1rem;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer-container p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-container a {
+    color: #ff6f69;
+    transition: color 0.3s;
+}
+
+.footer-container a:hover {
+    color: #ff0800;
+}
