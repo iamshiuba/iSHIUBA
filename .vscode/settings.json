@@ -1,3 +1,4 @@
 {
-    "cSpell.language": "en,en-US,lorem,en-GB"
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Consolas, 'Courier New', 'Segoe UI Emoji', 'Noto Emoji'"
 }
