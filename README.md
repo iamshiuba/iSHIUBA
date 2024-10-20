@@ -1,6 +1,6 @@
-# My Personal Website - iSHIUBA
+# IamSHIUBA's Website - iSHIUBA
 
-Welcome to the repository of my personal website, **iSHIUBA**! This site is a platform to share videos, music, and information about myself.
+Welcome to the repository of IamSHIUBA's website, **iSHIUBA**! This site is a platform to share videos, music, and more.
 
 ## Description
 
@@ -11,6 +11,7 @@ The website features a clean and responsive interface, developed with HTML, CSS,
 - **Video Carousel**: Display of YouTube videos in an interactive carousel.
 - **Language Selection**: Option to change the website language with support for English, Portuguese, and Japanese.
 - **Collapsible Sidebars**: Sidebars that can be hidden or shown, providing a more dynamic navigation experience.
+- **Theme Switch**: Option to change the website theme with support for Light and Dark.
 
 ## Technologies Used
 
@@ -23,14 +24,5 @@ The website features a clean and responsive interface, developed with HTML, CSS,
 
 Contributions are welcome! If you wish to contribute to this project, feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License.
-
-## Contact
-
-For questions or suggestions, you can reach me at:
-
-Email: iamshiuba@hotmail.com
 
 Thank you for visiting my repository!
