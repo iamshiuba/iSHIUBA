@@ -1,3 +1,5 @@
+<!-- youtube.html -->
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -5,17 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="IamSHIUBA's personal website with videos and music."
+      content="iSHIUBA's personal website with videos and music."
     />
     <meta name="keywords" content="iamshiuba, music, videos, entertainment" />
-    <title>iSHIUBA</title>
+    <title>Videos - iSHIUBA</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="static/css/main.css" />
   </head>
   <body>
     <div class="container-fluid" id="page">
@@ -27,26 +27,17 @@
             </a>
             <ul class="navbar-nav">
               <li id="Homepage" class="nav-item active">
-                <a
-                  class="nav-link"
-                  href="."
-                  data-translate="Homepage"
+                <a class="nav-link" href="." data-translate="Homepage"
                   >Homepage</a
                 >
               </li>
               <li id="Videos" class="nav-item">
-                <a
-                  class="nav-link"
-                  href="main.html"
-                  data-translate="Videos"
+                <a class="nav-link" href="main.html" data-translate="Videos"
                   >Videos</a
                 >
               </li>
               <li id="About" class="nav-item">
-                <a
-                  class="nav-link"
-                  href="about.html"
-                  data-translate="About"
+                <a class="nav-link" href="about.html" data-translate="About"
                   >About</a
                 >
               </li>
@@ -129,25 +120,12 @@
         </button>
       </header>
       <main>
-        <div class="col bg-black">
-          <div id="main">
-            <h1 data-translate="greeting">Hello, world!</h1>
-            <p class="lead" data-translate="mainMessage">
-              The website is still under construction, but you can check out
-              some of my videos, my about page, or my GitHub.
-            </p>
-            <h5 data-translate="highlight">Highlights</h5>
-            <div class="video-links">
-              <iframe
-                src="https://www.youtube.com/embed/pXNprgo7M9A?si=WcKIwS0FIS9nR74a"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
+        <div id="youtube" class="container-fluid">
+          <h1 class="lead" data-translate="videosDescription">
+            This is the videos section, here are some videos to watch:
+          </h1>
+          <h2>2024 Singles</h2>
+          <div class="row align-items-center" id="videoContainer"></div>
         </div>
       </main>
       <footer>
@@ -248,7 +226,7 @@
                     />
                   </svg>
                 </a>
-      
+
                 <a
                   rel="noopener"
                   href="https://www.youtube.com/@iamshiuba"
@@ -268,7 +246,7 @@
                     />
                   </svg>
                 </a>
-      
+
                 <a
                   rel="noopener"
                   href="https://soundcloud.com/iamshiuba"

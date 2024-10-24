@@ -2,6 +2,8 @@
 :root {
     --bg-color: #ffffff;
     --text-color: #000000;
+    --shadow-color-d: rgba(0, 0, 0, 0.051);
+    --shadow-color-l: rgba(255, 255, 255, 0.05);
 }
 
 /* Dark Theme */
@@ -78,7 +80,6 @@ div, button {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
 }
 
 #up, #down, .page-link, button {
@@ -118,55 +119,35 @@ a {
     text-align: center;
 }
 
-.link-container {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.carousel {
-    display: flex;
-}
-
-.carousel .carousel-inner {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+h1,h2,h3,h4,h5,p {
     text-align: center;
 }
 
-.carousel h1 {
+h1 {
     color: #ff0800;
     font-size: 3rem;
 }
 
-.carousel h2, h3, h4 {
+h2, h3, h4 {
     color: var(--text-color);
     font-size: 2rem;
     animation: fadeIn 2s ease-in-out;
 }
 
-.carousel p.lead {
+p.lead {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     animation: fadeIn 2s ease-in-out;
 }
 
-.carousel iframe {
+iframe {
     border: 2px solid var(--text-color);
     border-radius: 5px;
     animation: fadeIn 2s ease-in-out;
 }
 
-.carousel-item {
-    transition: opacity 0.5s ease-in-out;
-}
-
-.carousel-item.active {
-    opacity: 1;
-}
-
-.carousel-item:not(.active) {
-    opacity: 0;
+#youtube, .video-links{
+    text-align: center;
 }
 
 .video-links {
@@ -187,12 +168,7 @@ a {
     color: var(--text-color);
 }
 
-.pagination {
-    justify-content: center;
-    list-style: none;
-}
-
-.pagination .page-link {
+.nav-link {
     background-color: var(--bg-color);
     color: var(--text-color);
     border: none;
@@ -200,24 +176,35 @@ a {
     transition: color 0.2s ease;
 }
 
-.pagination .page-link:hover {
+.nav-link:hover {
     color: #ff0800;
     text-shadow: 0 0 3px #ff0800;
 
-}
-
-button {
-    border: none;
-    margin: 1rem;
-    transition: background-color 0.3s ease;
 }
 
 .navbar {
     background-color: var(--bg-color);
 }
 
+.navbar-nav{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.nav-item {
+    padding-right: 0.5rem;
+    
+}
+
 .navbar-brand img {
     width: 100px;
+}
+
+button {
+    border: none;
+    margin: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 @keyframes fadeIn {
@@ -240,6 +227,5 @@ button {
 
     .navbar {
         flex-direction: column;
-        /* Alinhar elementos verticalmente em telas menores */
     }
 }
