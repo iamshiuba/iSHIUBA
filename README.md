@@ -8,9 +8,8 @@ The website features a clean and responsive interface, developed with HTML, CSS,
 
 ## Features
 
-- **Video Carousel**: Display of YouTube videos in an interactive carousel.
 - **Language Selection**: Option to change the website language with support for English, Portuguese, and Japanese.
-- **Collapsible Sidebars**: Sidebars that can be hidden or shown, providing a more dynamic navigation experience.
+- **Collapsible header and footer**: header and footer can be hidden or shown, providing a more dynamic navigation experience.
 - **Theme Switch**: Option to change the website theme with support for Light and Dark.
 
 ## Technologies Used
