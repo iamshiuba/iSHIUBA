@@ -1,3 +1,7 @@
+/* The `translations` object in the JavaScript code snippet contains translations for different
+languages. Each language is represented by a key (en for English, br for Portuguese, jp for
+Japanese) and has an object with key-value pairs for various phrases and messages commonly found on
+a website. */
 const translations = {
   en: {
     ishiuba: "iSHIUBA",

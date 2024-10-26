@@ -1,3 +1,11 @@
+/**
+ * The function `loadVideos` loads a list of videos onto a webpage, creating iframes for each video and
+ * providing links to watch them.
+ * @returns The `loadVideos` function loads a list of videos onto the webpage by creating iframe
+ * elements for each video and appending them to the `videoContainer` element. The videos are sourced
+ * from an array of video objects containing titles, video IDs, and URLs. The function also checks for
+ * the existence of the `videoContainer` element and logs a warning if it is not found.
+ */
 function loadVideos() {
   const videos = [
     {
@@ -58,18 +66,24 @@ function loadVideos() {
   });
 }
 
+/* The `document.addEventListener("DOMContentLoaded", function () { initializeLanguage();
+initializeTheme(); loadVideos(); });` code is adding an event listener to the document that listens
+for the "DOMContentLoaded" event. When this event is triggered, it executes the functions
+`initializeLanguage()`, `initializeTheme()`, and `loadVideos()`. */
 document.addEventListener("DOMContentLoaded", function () {
   initializeLanguage();
   initializeTheme();
   loadVideos(); 
 });
 
-// Funções de inicialização do idioma e tema
+/**
+ * The `initializeLanguage` function sets the selected language based on the value stored in
+ * localStorage and checks the corresponding radio button.
+ */
 function initializeLanguage() {
   const selectedLanguage = localStorage.getItem("selectedLanguage") || "en";
   setLanguage(selectedLanguage);
 
-  // Atualizar o botão de idioma selecionado
   const radioButton = document.querySelector(
     `input[name="btnradio"][value="${selectedLanguage}"]`
   );
@@ -78,6 +92,10 @@ function initializeLanguage() {
   }
 }
 
+/**
+ * The function `initializeTheme` toggles a dark theme on a webpage based on user preference stored in
+ * local storage.
+ */
 function initializeTheme() {
   const themeSwitcher = document.getElementById("theme-switcher");
   const savedTheme = localStorage.getItem("theme");
@@ -86,7 +104,6 @@ function initializeTheme() {
     document.body.classList.add("dark");
     themeSwitcher.checked = true;
   } else {
-    // Remove a classe "dark" se estiver presente e assume o tema claro como padrão
     document.body.classList.remove("dark");
     themeSwitcher.checked = false;
   }
@@ -97,8 +114,12 @@ function initializeTheme() {
   });
 }
 
-
-// Função para alterar o idioma
+/**
+ * The function `setLanguage` allows for dynamic translation of elements on a webpage based on the
+ * selected language and stores the selected language in local storage.
+ * @param language - The `language` parameter is a string that represents the selected language for
+ * translation.
+ */
 function setLanguage(language) {
   const elementsToTranslate = document.querySelectorAll("[data-translate]");
   elementsToTranslate.forEach((element) => {
@@ -110,11 +131,15 @@ function setLanguage(language) {
 
   localStorage.setItem("selectedLanguage", language);
 
-  // Atualizar o atributo de idioma da página
   document.documentElement.setAttribute("lang", language);
 }
 
-// Evento para os botões de rádio de seleção de idioma
+/* The code `document.querySelectorAll('input[name="btnradio"]').forEach((radio) => {
+  radio.addEventListener("change", function () {
+    setLanguage(this.value);
+  });
+});` is selecting all input elements with the attribute `name="btnradio"` on the webpage. It then
+iterates over each of these input elements using the `forEach` method. */
 document.querySelectorAll('input[name="btnradio"]').forEach((radio) => {
   radio.addEventListener("change", function () {
     setLanguage(this.value);
