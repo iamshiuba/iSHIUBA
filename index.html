@@ -20,38 +20,31 @@
   <body>
     <div class="container-fluid" id="page">
       <header>
-        <nav class="navbar navbar-expand-lg" id="upCollapse">
+        <nav class="navbar navbar" id="upCollapse">
           <div class="container-fluid">
             <a class="navbar-brand">
               <img src="static\img\ishiubahor.png" alt="shiuba" />
             </a>
-            <ul class="navbar-nav">
-              <li id="Homepage" class="nav-item active">
-                <a
-                  class="nav-link"
-                  href="."
-                  data-translate="Homepage"
-                  >Homepage</a
-                >
-              </li>
-              <li id="Videos" class="nav-item">
-                <a
-                  class="nav-link"
-                  href="main.html"
-                  data-translate="Videos"
-                  >Videos</a
-                >
-              </li>
-              <li id="About" class="nav-item">
-                <a
-                  class="nav-link"
-                  href="about.html"
-                  data-translate="About"
-                  >About</a
-                >
-              </li>
-            </ul>
-            <div class="btn-group" role="group" aria-label="Language Selector">
+            <div id="nav">
+              <ul class="navbar-nav">
+                <li id="Homepage" class="nav-item active" aria-current="page">
+                  <a class="nav-link" href="." data-translate="Homepage"
+                    >Homepage</a
+                  >
+                </li>
+                <li id="Videos" class="nav-item">
+                  <a class="nav-link" href="main.html" data-translate="Videos"
+                    >Videos</a
+                  >
+                </li>
+                <li id="About" class="nav-item">
+                  <a class="nav-link" href="about.html" data-translate="About"
+                    >About</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div id="langselect" class="btn-group-sm" role="group" aria-label="Language Selector">
               <input
                 type="radio"
                 class="btn-check"
@@ -98,7 +91,7 @@
                 🇯🇵 日本語
               </label>
             </div>
-            <label class="switch me-2">
+            <label id="swicher" class="switch me-2">
               <input type="checkbox" id="theme-switcher" />
               <span class="slider round"></span>
             </label>
@@ -133,13 +126,16 @@
           <div id="main">
             <h1 data-translate="greeting">Hello, world!</h1>
             <p class="lead" data-translate="mainMessage">
-              The website is still under construction, but you can check out some of my videos, my about page, <br>
+              The website is still under construction, but you can check out
+              some of my videos, my about page, <br />
               or my social networks that are present in the website's footer.
             </p>
-            <h5 data-translate="highlight">Highlights</h5>
+            <h4 data-translate="highlight">Highlights</h4>
             <div class="video-links">
               <iframe
-                src="https://www.youtube.com/embed/pXNprgo7M9A?si=WcKIwS0FIS9nR74a"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/videoseries?si=F6CnMkx4AUkuURA_&amp;list=OLAK5uy_laLvEldekJ_qsP5DMbG-PYcEW3oQEYu_Q"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -248,7 +244,7 @@
                     />
                   </svg>
                 </a>
-      
+
                 <a
                   rel="noopener"
                   href="https://www.youtube.com/@iamshiuba"
@@ -268,7 +264,7 @@
                     />
                   </svg>
                 </a>
-      
+
                 <a
                   rel="noopener"
                   href="https://soundcloud.com/iamshiuba"

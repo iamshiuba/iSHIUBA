@@ -174,33 +174,29 @@ iframe {
     color: var(--text-color);
 }
 
+.navbar {
+    background-color: var(--bg-color);
+    padding: 0.5rem;
+}
+
 .nav-link {
     background-color: var(--bg-color);
     color: var(--text-color);
     border: none;
-    margin-top: 1rem;
     transition: color 0.2s ease;
 }
 
 .nav-link:hover {
     color: #ff0800;
     text-shadow: 0 0 3px #ff0800;
-
-}
-
-.navbar {
-    background-color: var(--bg-color);
 }
 
 .navbar-nav{
-    display: flex;
-    flex-wrap: nowrap;
     flex-direction: row;
 }
 
 .nav-item {
-    padding-right: 0.5rem;
-    
+    padding-right: 1rem;
 }
 
 .navbar-brand img {
@@ -211,6 +207,10 @@ button {
     border: none;
     margin: 1rem;
     transition: background-color 0.3s ease;
+}
+
+#langselect, #swicher, .navbar-brand, .nav-item {
+    padding: 0.5rem;
 }
 
 @keyframes fadeIn {
@@ -230,7 +230,8 @@ button {
         align-items: center;
     }
 
-    .navbar {
-        flex-direction: column;
+    iframe {
+        max-width: 100%;
     }
+
 }
