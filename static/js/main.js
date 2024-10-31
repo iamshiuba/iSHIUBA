@@ -1,3 +1,84 @@
+/* Consolidated `DOMContentLoaded` event listener */
+document.addEventListener("DOMContentLoaded", function () {
+  initializeLanguage();
+  initializeTheme();
+  loadVideos();
+});
+
+/**
+ * The `initializeLanguage` function sets the selected language based on the value stored in
+ * localStorage and checks the corresponding radio button.
+ */
+function initializeLanguage() {
+  const selectedLanguage = localStorage.getItem("selectedLanguage") || "en";
+  setLanguage(selectedLanguage);
+
+  const radioButton = document.querySelector(
+    `input[name="btnradio"][value="${selectedLanguage}"]`
+  );
+  if (radioButton) {
+    radioButton.checked = true;
+  }
+}
+
+/**
+ * The function `setLanguage` allows for dynamic translation of elements on a webpage based on the
+ * selected language and stores the selected language in local storage.
+ * @param language - The `language` parameter is a string that represents the selected language for
+ * translation.
+ */
+function setLanguage(language) {
+  const elementsToTranslate = document.querySelectorAll("[data-translate]");
+  elementsToTranslate.forEach((element) => {
+    const translationKey = element.getAttribute("data-translate");
+    const translation =
+      translations[language][translationKey] || translationKey;
+    element.innerHTML = translation;
+  });
+
+  localStorage.setItem("selectedLanguage", language);
+
+  document.documentElement.setAttribute("lang", language);
+}
+
+/* The code `document.querySelectorAll('input[name="btnradio"]').forEach((radio) => {
+  radio.addEventListener("change", function () {
+    setLanguage(this.value);
+  });
+});` is selecting all input elements with the attribute `name="btnradio"` on the webpage. It then
+iterates over each of these input elements using the `forEach` method. */
+document.querySelectorAll('input[name="btnradio"]').forEach((radio) => {
+  radio.addEventListener("change", function () {
+    setLanguage(this.value);
+  });
+});
+
+/**
+ * The above JavaScript functions initialize and toggle a dark theme for a webpage based on user
+ * preference and store the theme choice in local storage.
+ */
+function initializeTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    document.getElementById("theme-switcher").checked = true; // Set checkbox to reflect the theme
+  } else {
+    document.body.classList.remove("dark");
+    document.getElementById("theme-switcher").checked = false; // Set checkbox to reflect the theme
+  }
+}
+
+/**
+ * The function `toggleTheme` toggles between dark and light themes on a webpage based on the user's
+ * preference stored in local storage.
+ */
+function toggleTheme() {
+  const isDarkMode = localStorage.getItem('theme') === 'dark';
+  document.body.classList.toggle('dark', !isDarkMode);
+  localStorage.setItem('theme', isDarkMode ? 'light' : 'dark');
+}
+document.getElementById('theme-switcher').addEventListener('change', toggleTheme);
+
 /**
  * The function `loadVideos` loads a list of videos onto a webpage, creating iframes for each video and
  * providing links to watch them.
@@ -65,83 +146,3 @@ function loadVideos() {
     videoContainer.appendChild(colDiv);
   });
 }
-
-/* The `document.addEventListener("DOMContentLoaded", function () { initializeLanguage();
-initializeTheme(); loadVideos(); });` code is adding an event listener to the document that listens
-for the "DOMContentLoaded" event. When this event is triggered, it executes the functions
-`initializeLanguage()`, `initializeTheme()`, and `loadVideos()`. */
-document.addEventListener("DOMContentLoaded", function () {
-  initializeLanguage();
-  initializeTheme();
-  loadVideos(); 
-});
-
-/**
- * The `initializeLanguage` function sets the selected language based on the value stored in
- * localStorage and checks the corresponding radio button.
- */
-function initializeLanguage() {
-  const selectedLanguage = localStorage.getItem("selectedLanguage") || "en";
-  setLanguage(selectedLanguage);
-
-  const radioButton = document.querySelector(
-    `input[name="btnradio"][value="${selectedLanguage}"]`
-  );
-  if (radioButton) {
-    radioButton.checked = true;
-  }
-}
-
-/**
- * The function `initializeTheme` toggles a dark theme on a webpage based on user preference stored in
- * local storage.
- */
-function initializeTheme() {
-  const themeSwitcher = document.getElementById("theme-switcher");
-  const savedTheme = localStorage.getItem("theme");
-
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark");
-    themeSwitcher.checked = true;
-  } else {
-    document.body.classList.remove("dark");
-    themeSwitcher.checked = false;
-  }
-
-  themeSwitcher.addEventListener("change", function () {
-    document.body.classList.toggle("dark");
-    localStorage.setItem("theme", this.checked ? "dark" : "light");
-  });
-}
-
-/**
- * The function `setLanguage` allows for dynamic translation of elements on a webpage based on the
- * selected language and stores the selected language in local storage.
- * @param language - The `language` parameter is a string that represents the selected language for
- * translation.
- */
-function setLanguage(language) {
-  const elementsToTranslate = document.querySelectorAll("[data-translate]");
-  elementsToTranslate.forEach((element) => {
-    const translationKey = element.getAttribute("data-translate");
-    const translation =
-      translations[language][translationKey] || translationKey;
-    element.innerHTML = translation;
-  });
-
-  localStorage.setItem("selectedLanguage", language);
-
-  document.documentElement.setAttribute("lang", language);
-}
-
-/* The code `document.querySelectorAll('input[name="btnradio"]').forEach((radio) => {
-  radio.addEventListener("change", function () {
-    setLanguage(this.value);
-  });
-});` is selecting all input elements with the attribute `name="btnradio"` on the webpage. It then
-iterates over each of these input elements using the `forEach` method. */
-document.querySelectorAll('input[name="btnradio"]').forEach((radio) => {
-  radio.addEventListener("change", function () {
-    setLanguage(this.value);
-  });
-});
