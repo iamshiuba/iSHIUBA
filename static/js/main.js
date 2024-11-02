@@ -146,3 +146,16 @@ function loadVideos() {
     videoContainer.appendChild(colDiv);
   });
 }
+
+/**
+ * The function `showMenu` toggles the responsive class on an element with the id "myTopnav" to show or
+ * hide a menu.
+ */
+function showMenu() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
