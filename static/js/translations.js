@@ -5,19 +5,22 @@ const translations = {
     about: "About",
     greeting: "Hello, world!",
     mainMessage:
-      "This is my first website built from zero, I started coding in 2024/08 and did finish it in 2024/10.<br> There's only a few things here to check out for now: some videos, an about page, and you can visit my social networks that are present in the website's footer.",
+      "This is my first website built from scratch. I started coding in August 2024 and finished it in October 2024.<br>For now, there are only a few things to check out: some videos, an about page, a news page, and you can visit my social networks in the website's footer.",
     highlight: "Highlights",
-    hDescription: "A list of YouTube videos to watch here or in my Official Artist Channel.",
+    hDescription:
+      "A list of YouTube videos to watch here or on my Official Artist Channel.",
     footer: "All rights reserved.",
     videosTitle: "Videos",
     videosDescription:
-      "This is the video section, here are some videos to watch:",
+      "This is the video section; here are some videos to watch:",
     aboutTitle: "About",
     aboutMessage:
-      "I made this website for fun. I was doing a course of programming and I was learning about how to build a simple but cool website. <br> Then after a few weeks I started my own web project, to be honest I used AI for some things since I'm still new to programming, <br> I used it for the JS part and to improve some of my HTML/CSS code, but of course I didn't make it 100% using AI.<br> Thank you for visiting my website!",
+      "I made this website for fun. I was taking a programming course and learning how to build a simple yet cool website.<br>Then, after a few weeks, I started my own web project. To be honest, I used AI for some parts since I'm still new to programming.<br>I used it for the JavaScript part and to improve some of my HTML/CSS code, but of course, I didn't make it 100% using AI.<br>Thank you for visiting my website!",
     Homepage: "Homepage",
     Videos: "Videos",
     About: "About",
+    News: "News",
+    newsTitle: "News",
   },
   br: {
     ishiuba: "iSHIUBA",
@@ -25,19 +28,22 @@ const translations = {
     about: "Sobre",
     greeting: "Olá, mundo!",
     mainMessage:
-      "Este é o meu primeiro site construído do zero. Comecei a criá-lo em 08/2024 e terminei em 10/2024. <br> Há apenas algumas coisas aqui para conferir por enquanto: alguns vídeos, uma página sobre, e você pode visitar minhas redes sociais que estão presentes no rodapé do site.",
+      "Este é meu primeiro site construído do zero. Comecei a programá-lo em agosto de 2024 e terminei em outubro de 2024.<br>Por enquanto, há apenas algumas coisas para conferir: alguns vídeos, uma página sobre, uma página de notícias, e você pode visitar minhas redes sociais no rodapé do site.",
     highlight: "Destaques",
-    hDescription: "Uma lista de vídeos do YouTube para assistir aqui ou no meu Canal Oficial do Artista.",
+    hDescription:
+      "Uma lista de vídeos do YouTube para assistir aqui ou no meu canal oficial de artista.",
     footer: "Todos os direitos reservados.",
     videosTitle: "Vídeos",
     videosDescription:
-      "Esta é a seção de vídeos, aqui estão alguns vídeos para assistir:",
+      "Esta é a seção de vídeos; aqui estão alguns vídeos para assistir:",
     aboutTitle: "Sobre",
     aboutMessage:
-      "Eu fiz este site por diversão. Estava fazendo um curso de programação e aprendendo a criar um site simples, mas legal. <br> Depois de algumas semanas, comecei meu próprio projeto web; para ser sincero, usei IA em algumas partes, já que ainda sou novo em programação. <br> Usei para a parte de JS e para melhorar meu código em HTML/CSS, mas claro que não fiz tudo usando IA. <br>Obrigado por visitar meu site!",
+      "Fiz este site por diversão. Estava fazendo um curso de programação e aprendendo a criar um site simples, mas legal.<br>Depois de algumas semanas, comecei meu próprio projeto web. Para ser sincero, usei IA em algumas partes, pois ainda sou iniciante em programação.<br>Usei-a para a parte de JavaScript e para melhorar meu código HTML/CSS, mas, claro, não o fiz 100% com IA.<br>Obrigado pela visita ao meu site!",
     Homepage: "Página Inicial",
     Videos: "Vídeos",
     About: "Sobre",
+    News: "Notícias",
+    newsTitle: "Notícias",
   },
   jp: {
     ishiuba: "アイシウバ",
@@ -45,18 +51,21 @@ const translations = {
     about: "概要",
     greeting: "こんにちは、世界！",
     mainMessage:
-      "これはゼロから作った私の最初のウェブサイトです。2024年8月にプログラミングを始めて、10月に完成しました。<br> 今のところ、チェックできるのはビデオが少し、自己紹介ページ、そしてウェブサイトのフッターにある私のSNSにアクセスできます。",
+      "これは私がゼロから作った最初のウェブサイトです。2024年8月にコーディングを始め、2024年10月に完成させました。<br>現時点では、いくつかのビデオ、概要ページ、ニュースページをご覧いただけます。また、ウェブサイトのフッターにある私のSNSもご覧ください。",
     highlight: "ハイライト",
-    hDescription: "ここで見るためのYouTubeビデオのリスト、または私の公式アーティストチャンネルで。",
+    hDescription:
+      "ここで、または私の公式アーティストチャンネルで視聴できるYouTubeビデオのリストです。",
     footer: "全著作権所有。",
     videosTitle: "ビデオ",
     videosDescription:
-      "これはビデオセクションです。ここにいくつかの視聴するビデオがあります:",
+      "こちらがビデオセクションです。いくつか視聴できるビデオがあります:",
     aboutTitle: "概要",
     aboutMessage:
-      "私はこのウェブサイトを楽しみのために作りました。プログラミングのコースを受講していて、シンプルですがかっこいいウェブサイトの作り方を学んでいました。<br>その後、数週間後に自分のウェブプロジェクトを始めました。正直に言うと、まだプログラミング初心者なのでいくつかの部分でAIを使いました。<br>特にJSの部分やHTML/CSSの改善に使用しましたが、もちろん100％AIで作ったわけではありません。<br>訪問していただきありがとうございます！",
+      "このウェブサイトは趣味で作りました。プログラミングコースを受講中で、シンプルながらもクールなウェブサイトの作り方を学んでいました。<br>数週間後、自分のウェブプロジェクトを始めました。正直に言うと、プログラミングはまだ初心者なので、AIをいくつかの部分で使用しました。<br>JavaScriptの部分と、HTML/CSSコードの改善に使用しましたが、もちろん100％AIで作ったわけではありません。<br>ウェブサイトへのご訪問、ありがとうございます！",
     Homepage: "ホームページ",
     Videos: "ビデオ",
     About: "概要",
+    News: "ニュース",
+    newsTitle: "最新ニュース",
   },
 };
