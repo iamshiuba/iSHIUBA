@@ -259,17 +259,32 @@ label {
     }
 }
 
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    /* Distribui os itens horizontalmente */
+    align-items: center;
+    /* Alinha os itens verticalmente */
+    padding: 1rem;
+    /* Adiciona um espaçamento interno */
+}
+
+
 @media (max-width: 600px) {
 
     header .container {
         flex-direction: column;
         align-items: center;
     }
+
     main iframe {
         max-width: fit-content;
     }
+
     footer .container {
         flex-direction: column;
+        /* Muda para layout vertical em telas menores */
+        align-items: flex-start;
     }
 }
 
