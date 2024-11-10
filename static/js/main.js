@@ -120,7 +120,7 @@ function loadVideos() {
 
   videos.forEach((video) => {
     const colDiv = document.createElement("div");
-    colDiv.className = "col";
+    colDiv.className = "col-auto";
 
     colDiv.innerHTML = `
         <iframe

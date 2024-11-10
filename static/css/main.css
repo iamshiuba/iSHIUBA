@@ -2,8 +2,9 @@
 :root {
     --bg-color: #ffffff;
     --text-color: #000000;
-    --shadow-color: #ff000088;
-    --box-shadow: #ff11113a;
+    --shadow-color: #00000080;
+    --shadow-color-dark: #ffffff54;
+    --box-shadow: #ff11111e;
     --bg-primary: red;
     --bg-secondary: #ff6600;
 }
@@ -38,8 +39,8 @@ i {
 }
 
 i:hover {
-    background-color: var(--text-color);
-    color: var(--bg-secondary);
+    background-color: var(--bg-secondary);
+    color: var(--bg-primary);
 }
 
 a {
@@ -53,13 +54,14 @@ a {
 
 #down {
     margin: 0;
-    color: #ff0800;
+    color: var(--bg-primary);
     padding: 2rem;
 }
 
 #down:hover {
     background-color: var(--bg-color);
     color: var(--text-color);
+    border-color: var(--text-color);
 }
 
 
@@ -77,13 +79,18 @@ a {
     text-align: center;
 }
 
-body, h1, h2, h3, h4, h5, p, a {
-    text-shadow: 0px 0px 10px var(--shadow-color);
+body h1, h2, h3, h4, h5, p, a {
+    text-shadow: 3px 3px 6px var(--shadow-color);
+    text-align: center;
+}
+
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark p, body.dark a {
+    text-shadow: 3px 3px 6px var(--shadow-color-dark);
     text-align: center;
 }
 
 h1 {
-    color: #ff0800;
+    color: var(--bg-primary);
     font-size: 4rem;
 }
 
@@ -92,7 +99,7 @@ h1, .display-1, .display-2, .display-3 {
 }
 
 h2, h3, h4 {
-    color: var(--text-color);
+    color: var(--bg-secondary);
     font-size: 2rem;
 }
 
@@ -121,11 +128,29 @@ button {
 }
 
 label.btn:hover {
-    background-color: var(--bg-primary) !important;
+    border-color: var(--text-color) !important;
+    color: var(--text-color) !important;
 }
 
 label {
     margin-top: 1rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container {
+    display: flex;
+    
+    justify-content: center;
+    /* Distribui os itens horizontalmente */
+
+    padding: 1rem;
+    /* Adiciona um espaçamento interno */
 }
 
 #youtube, .video-links {
@@ -259,17 +284,6 @@ label {
     }
 }
 
-footer .container {
-    display: flex;
-    justify-content: space-between;
-    /* Distribui os itens horizontalmente */
-    align-items: center;
-    /* Alinha os itens verticalmente */
-    padding: 1rem;
-    /* Adiciona um espaçamento interno */
-}
-
-
 @media (max-width: 600px) {
 
     header .container {
@@ -284,7 +298,7 @@ footer .container {
     footer .container {
         flex-direction: column;
         /* Muda para layout vertical em telas menores */
-        align-items: flex-start;
+        align-items: center;
     }
 }
 
