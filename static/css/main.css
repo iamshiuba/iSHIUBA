@@ -1,20 +1,17 @@
-/* Light Theme */
 :root {
     --bg-color: #ffffff;
     --text-color: #000000;
     --shadow-color: #00000080;
-    --shadow-color-dark: #ffffff54;
-    --box-shadow: #ff11111e;
+    --shadow-color-dark: #ffffff25;
+    --box-shadow: #ff11117c;
     --bg-primary: red;
-    --bg-secondary: #ff6600;
+    --bg-secondary: #ff8d23;
 }
 
-/* Dark Theme */
 body.dark {
     --bg-color: #000000;
     --text-color: #ffffff;
 }
-
 
 * {
     margin: 0;
@@ -64,7 +61,6 @@ a {
     border-color: var(--text-color);
 }
 
-
 #main p.lead {
     font-size: 1.5rem;
     line-height: 1.6;
@@ -80,12 +76,12 @@ a {
 }
 
 body h1, h2, h3, h4, h5, p, a {
-    text-shadow: 3px 3px 6px var(--shadow-color);
+    text-shadow: 2px 3px 2px var(--shadow-color);
     text-align: center;
 }
 
 body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark p, body.dark a {
-    text-shadow: 3px 3px 6px var(--shadow-color-dark);
+    text-shadow: 2px 3px 2px var(--shadow-color-dark);
     text-align: center;
 }
 
@@ -117,7 +113,7 @@ iframe {
     max-width: auto;
     margin: auto;
     border-radius: 8px;
-    box-shadow: 0px 0px 8px 8px var(--box-shadow);
+    box-shadow: 0px 0px 1rem var(--box-shadow);
 }
 
 button {
@@ -133,32 +129,35 @@ label.btn:hover {
 }
 
 label {
-    margin-top: 1rem;
+    padding: 1rem;
 }
 
 footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 footer .container {
     display: flex;
-    
-    justify-content: center;
-    /* Distribui os itens horizontalmente */
-
+    flex-direction: column;
     padding: 1rem;
-    /* Adiciona um espaçamento interno */
 }
 
 #youtube, .video-links {
     text-align: center;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .video-links {
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -167,7 +166,7 @@ footer .container {
     margin-bottom: 1rem;
     padding: 0.5rem;
     border-radius: 1rem;
-    color: #ff261d;
+    color: var(--bg-primary);
     transition: color, border 0.3s ease;
 }
 
@@ -208,11 +207,6 @@ footer .container {
 
 .topnav .icon {
     display: none;
-}
-
-
-.navbar-brand img {
-    width: 100px;
 }
 
 .display-1, .display-2, .display-3 {
@@ -285,19 +279,22 @@ footer .container {
 }
 
 @media (max-width: 600px) {
-
     header .container {
         flex-direction: column;
         align-items: center;
     }
 
+    #videoContainer, #news {
+        flex-direction: column;
+    }
+
     main iframe {
+
         max-width: fit-content;
     }
 
     footer .container {
         flex-direction: column;
-        /* Muda para layout vertical em telas menores */
         align-items: center;
     }
 }
@@ -309,13 +306,15 @@ footer .container {
 
     .topnav a.icon {
         float: right;
-        display: block;
+        display: flex;
     }
 }
 
 @media screen and (max-width: 600px) {
     .topnav.responsive {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         position: relative;
     }
 
