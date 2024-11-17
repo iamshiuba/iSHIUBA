@@ -24,7 +24,7 @@ body {
     color: var(--text-color);
 }
 
-#down, button {
+button {
     transition: all 0.3s ease;
 }
 
@@ -47,18 +47,6 @@ a {
 
 .link {
     animation: fadeIn 5s ease-in-out;
-}
-
-#down {
-    margin: 0;
-    color: var(--bg-primary);
-    padding: 2rem;
-}
-
-#down:hover {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    border-color: var(--text-color);
 }
 
 #main p.lead {

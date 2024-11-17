@@ -17,6 +17,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+  />
     <link rel="stylesheet" href="static/css/main.css" />
   </head>
   <body>
@@ -50,87 +54,125 @@
         <div class="row align-items-center" id="videoContainer"></div>
       </div>
     </main>
-
     <footer>
-      <div class="collapse show">
-        <div class="container">
-          <div class="row-cols-auto p-3">
-            <button
-              id="langselect"
-              class="icon"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#menu2"
-              aria-controls="menu"
-              aria-expanded="false"
-              aria-label="Change Language"
+      <div class="container">
+        <div class="row-cols-auto p-3">
+          <button
+            id="langselect"
+            class="icon"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu2"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Change Language"
+          >
+            <i class="fa-solid fa-language"></i>
+          </button>
+          <div class="collapse p-1" id="menu2">
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio1"
+              autocomplete="off"
+            />
+            <label
+              type="radio"
+              class="btn btn-outline-primary"
+              for="btnradio1"
+              onclick="setLanguage('en')"
             >
-              <i class="fa-solid fa-language"></i>
-            </button>
-            <div class="collapse p-1" id="menu2">
-              <input
-                type="radio"
-                class="btn-check"
-                name="btnradio"
-                id="btnradio1"
-                autocomplete="off"
-              />
-              <label
-                type="radio"
-                class="btn btn-outline-primary"
-                for="btnradio1"
-                onclick="setLanguage('en')"
-              >
-                🇺🇸 en-US
-              </label>
-              <input
-                type="radio"
-                class="btn-check"
-                name="btnradio"
-                id="btnradio2"
-                autocomplete="off"
-              />
-              <label
-                type="radio"
-                class="btn btn-outline-success"
-                for="btnradio2"
-                onclick="setLanguage('br')"
-              >
-                🇧🇷 pt-BR
-              </label>
-              <input
-                type="radio"
-                class="btn-check"
-                name="btnradio"
-                id="btnradio3"
-                autocomplete="off"
-              />
-              <label
-                type="radio"
-                class="btn btn-outline-danger"
-                for="btnradio3"
-                onclick="setLanguage('jp')"
-              >
-                🇯🇵 日本語
-              </label>
-            </div>
+              <span class="fi fi-us"></span>
+            </label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio2"
+              autocomplete="off"
+            />
+            <label
+              type="radio"
+              class="btn btn-outline-success"
+              for="btnradio2"
+              onclick="setLanguage('br')"
+            >
+              <span class="fi fi-br"></span>
+            </label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio3"
+              autocomplete="off"
+            />
+            <label
+              type="radio"
+              class="btn btn-outline-danger"
+              for="btnradio3"
+              onclick="setLanguage('jp')"
+            >
+              <span class="fi fi-jp"></span>
+            </label>
           </div>
-          <div class="col-lg-auto">
-            <p>
-              Powered by NEXTせだい <br />
-              &copy; 2023 - 2024 IamSHIUBA.
-              <span data-translate="footer">All rights reserved.</span>
-            </p>
-          </div>
-          <div class="p-3">
-            <button id="links" class="icon" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Open External Links"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-            <div class="collapse collapse" id="menu">
-              <div class="row-cols-auto">
-                <a rel="noopener" href="https://github.com/iamshiuba" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a rel="noopener" href="https://x.com/iamshiuba" class="btn" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a rel="noopener" href="https://www.youtube.com/@iamshiuba" class="btn" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                <a rel="noopener" href="https://soundcloud.com/iamshiuba" class="btn" target="_blank"><i class="fa-brands fa-soundcloud"></i></a>
-              </div>
+        </div>
+        <div class="col-lg-auto">
+          <p>
+            Powered by NEXTせだい <br />
+            &copy; 2023 - 2024 IamSHIUBA.
+            <span data-translate="footer">All rights reserved.</span>
+          </p>
+        </div>
+        <div class="p-3">
+          <button
+            id="links"
+            class="icon"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Open External Links"
+          >
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </button>
+          <div class="collapse collapse" id="menu">
+            <div class="row-cols-auto">
+              <a
+                rel="noopener"
+                href="https://github.com/iamshiuba"
+                class="btn"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                rel="noopener"
+                href="https://x.com/iamshiuba"
+                class="btn"
+                target="_blank"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+    
+              <a
+                rel="noopener"
+                href="https://www.youtube.com/@iamshiuba"
+                class="btn"
+                target="_blank"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+    
+              <a
+                rel="noopener"
+                href="https://soundcloud.com/iamshiuba"
+                class="btn"
+                target="_blank"
+              >
+                <i class="fa-brands fa-soundcloud"></i>
+              </a>
             </div>
           </div>
         </div>
