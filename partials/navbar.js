@@ -13,28 +13,28 @@ document.addEventListener("DOMContentLoaded", function () {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="../layout/layout.html" class="navbar-brand">
+        <a href="/" class="navbar-brand">
           <img class="logo" src="../static/img/ishiubahor.png" alt="shiuba" />
         </a>
         <div class="collapse navbar-collapse justify-content-end" id="menu">
           <ul id="pageURl" class="nav nav-underline">
             <li class="nav-item">
-              <a href="../pages/index.html" class="nav-link active" data-translate="Homepage"> </a>
+              <a href="#" class="nav-link active" data-page="index" data-translate="Homepage">Homepage</a>
             </li>
             <li class="nav-item">
-              <a href="../pages/streaming.html" class="nav-link" data-translate="Streaming"></a>
+              <a href="#" class="nav-link" data-page="streaming" data-translate="Streaming">Streaming</a>
             </li>
             <li class="nav-item">
-              <a href="../pages/about.html" class="nav-link" data-translate="About"></a>
+              <a href="#" class="nav-link" data-page="about" data-translate="About">About</a>
             </li>
             <li class="nav-item">
-              <a href="../pages/news.html" class="nav-link" data-translate="News"></a>
+              <a href="#" class="nav-link" data-page="news" data-translate="News">News</a>
             </li>
             <li class="nav-item">
-              <a href="#" id="tos" class="nav-link" target="_blank" rel="noopener" data-translate="tos"></a>
+              <a href="#" id="tos" class="nav-link" target="_blank" rel="noopener" data-translate="tos">Terms of Service</a>
             </li>
             <li class="nav-item">
-              <a href="#" id="privacy" class="nav-link" target="_blank" rel="noopener" data-translate="privacy"></a>
+              <a href="#" id="privacy" class="nav-link" target="_blank" rel="noopener" data-translate="privacy">Privacy Policy</a>
             </li>
           </ul>
         </div>
@@ -65,4 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </nav>
   `;
+
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const page = link.getAttribute("data-page");
+      loadPage(page);
+    });
+  });
 });

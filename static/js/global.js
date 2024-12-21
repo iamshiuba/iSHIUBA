@@ -18,12 +18,19 @@ function loadPage(page) {
     .then((html) => {
       content.innerHTML = html;
       document.querySelectorAll(".nav-link").forEach((link) => {
-        if (link.getAttribute("href").includes(page)) {
+        if (link.getAttribute("data-page") === page) {
           link.classList.add("active");
         } else {
           link.classList.remove("active");
         }
       });
+      // Execute any scripts included in the loaded HTML
+      const scripts = content.getElementsByTagName("script");
+      for (let script of scripts) {
+        const newScript = document.createElement("script");
+        newScript.src = script.src;
+        document.body.appendChild(newScript);
+      }
     })
     .catch((error) => {
       console.error("Error loading page:", error);
@@ -38,5 +45,7 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   });
 });
 
-// Initially display the index page
-loadPage("index");
+document.addEventListener("DOMContentLoaded", () => {
+  // Initially display the index page
+  loadPage("index");
+});
