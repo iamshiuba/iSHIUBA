@@ -13,28 +13,28 @@ document.addEventListener("DOMContentLoaded", function () {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="/" class="navbar-brand">
-          <img class="logo" src="../static/img/ishiubahor.png" alt="shiuba" />
+        <a class="navbar-brand nav-link" data-page="home">
+          <img class="logo" src="/static/img/ishiubahor.png" alt="shiuba" />
         </a>
         <div class="collapse navbar-collapse justify-content-end" id="menu">
           <ul id="pageURl" class="nav nav-underline">
             <li class="nav-item">
-              <a href="#" class="nav-link active" data-page="index" data-translate="Homepage">Homepage</a>
+              <a class="nav-link active" data-page="home" data-translate="Homepage"></a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link" data-page="streaming" data-translate="Streaming">Streaming</a>
+              <a class="nav-link" data-page="streaming" data-translate="Streaming"></a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link" data-page="about" data-translate="About">About</a>
+              <a class="nav-link" data-page="about" data-translate="About"></a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link" data-page="news" data-translate="News">News</a>
+              <a class="nav-link" data-page="news" data-translate="News"></a>
             </li>
             <li class="nav-item">
-              <a href="#" id="tos" class="nav-link" target="_blank" rel="noopener" data-translate="tos">Terms of Service</a>
+              <a class="nav-link" data-page="TERMS" data-translate="tos"></a>
             </li>
             <li class="nav-item">
-              <a href="#" id="privacy" class="nav-link" target="_blank" rel="noopener" data-translate="privacy">Privacy Policy</a>
+              <a class="nav-link" data-page="PRIVACY" data-translate="privacy"></a>
             </li>
           </ul>
         </div>
@@ -71,6 +71,43 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
       const page = link.getAttribute("data-page");
       loadPage(page);
+      setActiveLink(link);
     });
   });
+
+  function loadPage(page) {
+    const section = document.getElementById(page);
+    if (!section) {
+      fetch(`/partials/${page}.html`)
+        .then((response) => response.text())
+        .then((html) => {
+          const newSection = document.createElement("section");
+          newSection.id = page;
+          newSection.innerHTML = html;
+          document.getElementById("content").appendChild(newSection);
+          showSection(page);
+        })
+        .catch((error) => console.error("Error loading page:", error));
+    } else {
+      showSection(page);
+    }
+  }
+
+  function showSection(page) {
+    document.querySelectorAll("main section").forEach((section) => {
+      section.style.display = "none";
+    });
+    document.getElementById(page).style.display = "block";
+  }
+
+  function setActiveLink(activeLink) {
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.classList.remove("active");
+    });
+    activeLink.classList.add("active");
+  }
+
+  // Load the default page
+  loadPage("home");
+  setActiveLink(document.querySelector('.nav-link[data-page="home"]'));
 });
